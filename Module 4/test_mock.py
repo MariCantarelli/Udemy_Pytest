@@ -9,12 +9,14 @@ def mock_response():
     mock.json.return_value = {"message": "Success"}
     return mock
 
-def (mock_response):
+# Erro 1: Adicionado o nome 'test_api_call_1'
+def test_api_call_1(mock_response):
     response = mock_response
     assert response.status_code == 200
     assert response.json() == {"message": "Success"}
 
+# Erro 2: Limpeza da linha e identação correta
 def test_api_call_with_mock2(mock_response):
     response = mock_response
-test_api_call_with_mock1    assert response.status_code == 200
+    assert response.status_code == 200
     assert response.json() == {"message": "Success"}
